@@ -9,5 +9,5 @@ org <- function(res, n, nsim){
   for(i in 1:n){
     result[index2[i]:(index2[i]+nsim-1), 2:4] <- res[1:nsim, index1[i]:(index1[i]+2)]
   }
-return(result)  
+  return(result)  
 }

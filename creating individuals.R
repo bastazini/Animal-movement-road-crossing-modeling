@@ -50,14 +50,14 @@ make.n.ind(PAR)
 # Em teoria so precisaria gerar esse data.frame com os parametros
 # Poderias usar a funcao rep, sample, runif,... para gerar esse data.frame
 #definir o numero de individuos (defining  number of individuals)
-                 n=20
-                 estado=n/2
-                 
+n=20
+estado=n/2
+
 PAR.test <- data.frame(state = rep(c("RW.CRW", "Res.CRW"), each = estado), # "RW", "Res.CRW" or "RW.CRW"
-                  auto.cor = runif(n, min = 0.5, max = 0.9), 
-                  state1 = runif(n, min = 0.5, max = 0.5),
-                  state2 = runif(n, min = 0.5, max = 0.5),
-                  step.lentgh = runif(n, min = 5, max = 29))
+                       auto.cor = runif(n, min = 0.5, max = 0.9), 
+                       state1 = runif(n, min = 0.5, max = 0.5),
+                       state2 = runif(n, min = 0.5, max = 0.5),
+                       step.lentgh = runif(n, min = 5, max = 29))
 PAR.test
 make.n.ind(PAR.test)
 

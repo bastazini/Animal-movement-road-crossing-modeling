@@ -26,6 +26,7 @@ ind=make.n.ind(PAR.test)
 nsim=10000
 resu.simu=simulate(ind,nsim,resist =mapa,start.resistance=0.2)
 resu.thous.287=org(resu.simu, n, nsim)
+write.csv(resu.thous.287,"resu.thous.287.csv")
 
 
 

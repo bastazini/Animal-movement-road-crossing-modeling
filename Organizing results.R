@@ -11,3 +11,20 @@ org <- function(res, n, nsim){
   }
   return(result)  
 }
+
+##Funçao para organizar arquivos grandes,salvando direto no HD
+org.file <- function(res, n, nsim, file){
+  res.temp <- matrix(NA, nrow = 0, ncol = 4)
+  write.table(res.temp, file = file, append = FALSE, sep = ";", row.names = F, col.names = F)
+  index1 <- seq(from = 1, to = n*3, by = 3)
+  index2 <- seq(from = 1, to = nsim*n, by = nsim)
+  for(i in 1:n){
+    res.temp <- cbind(rep(i, nsim), res[1:nsim, index1[i]:(index1[i]+2)])
+    write.table(res.temp, file = file, append = T, sep = ";", row.names = F, col.names = F)
+    if(i%%1000==0){
+      print(i)
+    }
+  }
+}
+Ex.:
+org.file(res2, n = 400000, nsim = 10000, file = "file..txtname")

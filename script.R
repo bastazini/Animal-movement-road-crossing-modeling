@@ -30,7 +30,7 @@ write.csv(resu.thous.287,"resu.thous.287.csv")
 
 ##Se precisar paralelizar
 require((doParallel))
-cl <- makePSOCKcluster(5)
+cl <- makePSOCKcluster(detectCores())
 registerDoParallel(cl)
 ###Entrar o script aqui
 stopCluster(cl)

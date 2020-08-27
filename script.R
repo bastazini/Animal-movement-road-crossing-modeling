@@ -28,5 +28,10 @@ resu.simu=simulate(ind,nsim,resist =mapa,start.resistance=0.2)
 resu.thous.287=org(resu.simu, n, nsim)
 write.csv(resu.thous.287,"resu.thous.287.csv")
 
-
+##Se precisar paralelizar
+require((doParallel))
+cl <- makePSOCKcluster(5)
+registerDoParallel(cl)
+###Entrar o script aqui
+stopCluster(cl)
 

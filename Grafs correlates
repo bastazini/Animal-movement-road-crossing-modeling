@@ -1,0 +1,103 @@
+###Grafs
+#040
+dados=read.table(pipe("pbpaste"), sep="\t", header=T);dados
+x=c(1,2,3,4,5)
+avg=dados$media
+lower=dados$II
+upper=dados$IS
+par(mar=c(5,10,1,1))
+plot(1, type="n", axt="n", yaxt="n", ylab="", xlim=c(-1, 1), ylim=c(0, 6),xlab="Correlação")
+points(avg,x, pch=16,cex=1.5)
+arrows(lower, x, upper,x, length=0.05, angle=90, code=3,lwd=2.5,lty=1,rm.na=T)
+abline(v=0,lty=2, lwd=2)
+axis(side=2,at=x,label=c("Didelphis albiventris", "Dasypus novemcinctus","Galictis cuja","Nectomys squamipes", "Coendou sp."),cex.lab=14, las=1)
+
+###PHI
+dados=read.table(pipe("pbpaste"), sep="\t", header=T)
+x=c(1.3,2.3,3.3,4.3,5.3)
+avg=dados$media
+lower=dados$II
+upper=dados$IS
+points(avg,x, pch=16,cex=1.5)
+arrows(lower, x, upper,x, length=0.05, angle=90, code=3,lwd=2.5,lty=4)
+
+###CIRCUITSCAPE
+dados=read.table(pipe("pbpaste"), sep="\t", header=T)
+x=c(0.7,1.7,2.7,3.7,4.7)
+avg=dados$media
+lower=dados$II
+upper=dados$IS
+points(avg,x, pch=16,cex=1.5,col="blue")
+arrows(lower, x, upper,x, length=0.05, angle=90, code=3,lwd=2.5, col="blue")
+a=locator(1)
+legend(a, legend=c("MBI (número de carcaças)", "MBI (hotspot)","MBC (número de carcaças)"),
+       col=c("black", "black","blue"), lty=c(1,4,1), cex=0.8,box.lty=0)
+###Grafs
+#0287
+dados=read.table(pipe("pbpaste"), sep="\t", header=T);dados
+x=c(1,2,3,4)
+avg=dados$media
+lower=dados$II
+upper=dados$IS
+par(mar=c(5,10,1,1))
+plot(1, type="n", yaxt="n", ylab="", xlim=c(-1, 1), ylim=c(0, 5),xlab="Correlação")
+points(avg,x, pch=16,cex=1.5)
+arrows(lower, x, upper,x, length=0.05, angle=90, code=3,lwd=2.5,lty=1,rm.na=T)
+abline(v=0,lty=2, lwd=2)
+axis(side=2,at=x,label=c("Didelphis albiventris", "Dasypus novemcinctus","Cerdocyon thous", "Coendou sp."),cex.lab=14, las=1)
+
+###PHI
+dados=read.table(pipe("pbpaste"), sep="\t", header=T);dados
+x=c(1.3,2.3,3.3,4.3)
+avg=dados$media
+lower=dados$II
+upper=dados$IS
+points(avg,x, pch=16,cex=1.5)
+arrows(lower, x, upper,x, length=0.05, angle=90, code=3,lwd=2.5,lty=4)
+
+###CIRCUITSCAPE
+dados=read.table(pipe("pbpaste"), sep="\t", header=T);dados
+x=c(0.7,1.7,2.7,3.7)
+avg=dados$media
+lower=dados$II
+upper=dados$IS
+points(avg,x, pch=16,cex=1.5,col="blue")
+arrows(lower, x, upper,x, length=0.05, angle=90, code=3,lwd=2.5, col="blue")
+a=locator(1)
+legend(a, legend=c("MBI (número de carcaças)", "MBI (hotspot)","MBC (número de carcaças)"),
+       col=c("black", "black","blue"), lty=c(1,4,1), cex=0.8,box.lty=0)
+
+###Grafs
+#235
+dados=read.table(pipe("pbpaste"), sep="\t", header=T);dados
+x=c(1,2)
+avg=dados$media
+lower=dados$II
+upper=dados$IS
+par(mar=c(5,10,1,1))
+plot(1, type="n", axt="n", yaxt="n", ylab="", xlim=c(-1, 1), ylim=c(0, 3),xlab="Correlação")
+points(avg,x, pch=16,cex=1.5)
+arrows(lower, x, upper,x, length=0.05, angle=90, code=3,lwd=2.5,lty=1,rm.na=T)
+abline(v=0,lty=2, lwd=2)
+axis(side=2,at=x,label=c("Didelphis albiventris", "Dasypus novemcinctus"),cex.lab=14, las=1)
+
+###PHI
+dados=read.table(pipe("pbpaste"), sep="\t", header=T);dados
+x=c(1.3,2.3)
+avg=dados$media
+lower=dados$II
+upper=dados$IS
+points(avg,x, pch=16,cex=1.5)
+arrows(lower, x, upper,x, length=0.05, angle=90, code=3,lwd=2.5,lty=4)
+
+###CIRCUITSCAPE
+dados=read.table(pipe("pbpaste"), sep="\t", header=T);dados
+x=c(0.7,1.7)
+avg=dados$media
+lower=dados$II
+upper=dados$IS
+points(avg,x, pch=16,cex=1.5,col="blue")
+arrows(lower, x, upper,x, length=0.05, angle=90, code=3,lwd=2.5, col="blue")
+a=locator(1)
+legend(a, legend=c("MBI (número de carcaças)", "MBI (hotspot)","MBC (número de carcaças)"),
+       col=c("black", "black","blue"), lty=c(1,4,1), cex=0.8,box.lty=0)

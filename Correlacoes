@@ -17,3 +17,10 @@ phi( dados$cross,
      conf = 0.95,
      type = "perc",
      R = 1000)
+     
+     ###Mosaic plots and chi^2
+     library(vcd)
+     mosaic(~ cross+ roadkill,
+direction = c("v", "h"),
+        data = dados,
+     shade = TRUE)

@@ -1,0 +1,5 @@
+dados=read.table(pipe("pbpaste"), sep="\t", header=T);dados
+a=dados$n_crosses
+p=dados$roadkill
+roc_obj <- roc(p, a,plot=TRUE,ci=TRUE, smooth = TRUE);roc_obj
+auc(roc_obj)
